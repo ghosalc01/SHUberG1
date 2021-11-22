@@ -1,15 +1,56 @@
 package com.example.shuber
 
-import androidx.appcompat.app.AppCompatActivity
+import android.annotation.SuppressLint
+import android.location.Location
 import android.os.Bundle
-
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.shuber.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener
+import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.example.shuber.databinding.ActivityMapsBinding
+
+internal class MyLocationLayerActivity : AppCompatActivity(),
+    OnMyLocationButtonClickListener,
+    OnMyLocationClickListener,
+    OnMapReadyCallback {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_maps)
+        val mapFragment =
+            supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+        mapFragment.getMapAsync(this)
+    }
+
+    @SuppressLint("MissingPermission")
+    override fun onMapReady(map: GoogleMap) {
+        // TODO: Before enabling the My Location layer, you must request
+        // location permission from the user. This sample does not include
+        // a request for location permission.
+        map.isMyLocationEnabled = true
+        map.setOnMyLocationButtonClickListener(this)
+        map.setOnMyLocationClickListener(this)
+    }
+
+    override fun onMyLocationClick(location: Location) {
+        Toast.makeText(this, "Current location:\n$location", Toast.LENGTH_LONG)
+            .show()
+    }
+
+    override fun onMyLocationButtonClick(): Boolean {
+        Toast.makeText(this, "MyLocation button clicked", Toast.LENGTH_SHORT)
+            .show()
+        // Return false so that we don't consume the event and the default behavior still occurs
+        // (the camera animates to the user's current position).
+        return false
+    }
+}
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -44,5 +85,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val sydney = LatLng(-34.0, 151.0)
         mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+    }
+
+    class MapsMarkerActivity : AppCompatActivity(), OnMapReadyCallback {
+
+        // ...
+
+        override fun onMapReady(googleMap: GoogleMap) {
+            val sydney = LatLng(-33.852, 151.211)
+            googleMap.addMarker(
+                MarkerOptions()
+                    .position(sydney)
+                    .title("Marker in Sydney")
+            )
+        }
     }
 }
