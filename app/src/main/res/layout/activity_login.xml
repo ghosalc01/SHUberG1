@@ -13,9 +13,10 @@
         android:layout_height="43dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="160dp" android:layout_marginEnd="8dp"
-        android:ems="10" android:hint="id"
+        android:ems="10" android:hint="Email"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <EditText
         android:id="@+id/et_pass"
         android:layout_width="0dp"
@@ -41,4 +42,26 @@
         android:text="Rigister"
         app:layout_constraintEnd_toEndOf="@+id/et_pass"
         app:layout_constraintStart_toStartOf="@+id/et_pass" app:layout_constraintTop_toBottomOf="@+id/btn_login"/>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp" android:text="SHUBER"
+        android:textAlignment="center" android:textSize="34sp"
+        android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="EASY TO RIDE THE TAXI"
+        android:textAlignment="center" app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3" app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+    <Switch
+        android:id="@+id/btn_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" android:text="Use as a driver"
+        android:textAlignment="viewEnd" android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register"
+        app:layout_constraintStart_toStartOf="@+id/btn_register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "573902056033",
+    "project_id": "shuberapp-d2a74",
+    "storage_bucket": "shuberapp-d2a74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573902056033:android:00b0d879c166b62c0dd820",
+        "android_client_info": {
+          "package_name": "com.example.shuber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573902056033-e7kboec8cc1v6i7eeebhmgjv4402o2lm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoN77-Of2QIipHfL-B5YFvGMsElQ0wpXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573902056033-e7kboec8cc1v6i7eeebhmgjv4402o2lm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
