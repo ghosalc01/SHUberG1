@@ -78,11 +78,6 @@ public class CustomerRegisterActivity extends AppCompatActivity implements View.
             emailView.requestFocus();
             return;
         }
-//        if(Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-//            emailView.setError("this is not valid email");
-//            emailView.requestFocus();
-//            return;
-//        }
         if(name.isEmpty()){
             nameView.setError("this field is required!");
             nameView.requestFocus();
