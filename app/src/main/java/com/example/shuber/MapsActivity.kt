@@ -82,9 +82,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val sheffield = LatLng(53.37852755978789, -1.466298969189442)
+        mMap.addMarker(MarkerOptions().position(sheffield).title("Marker in Sheffiled Hallam University"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sheffield))
     }
 
     class MapsMarkerActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -92,10 +92,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // ...
 
         override fun onMapReady(googleMap: GoogleMap) {
-            val sydney = LatLng(-33.852, 151.211)
+            val sheffield = LatLng(53.37852755978789, -1.466298969189442)
             googleMap.addMarker(
                 MarkerOptions()
-                    .position(sydney)
+                    .position(sheffield)
                     .title("Marker in Sydney")
             )
         }
