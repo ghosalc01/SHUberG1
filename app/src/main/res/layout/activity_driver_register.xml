@@ -21,10 +21,11 @@
         android:layout_height="wrap_content" android:text="EASY TO RIDE THE TAXI"
         android:textAlignment="center" app:layout_constraintEnd_toEndOf="@+id/textView5"
         app:layout_constraintStart_toStartOf="@+id/textView5" app:layout_constraintTop_toBottomOf="@+id/textView5"/>
+
     <EditText
         android:id="@+id/passView"
         android:layout_width="289dp"
-        android:layout_height="0dp"
+        android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Password"
@@ -32,17 +33,22 @@
         android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="@+id/nameView"
         app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="@+id/nameView" app:layout_constraintTop_toBottomOf="@+id/nameView"/>
+        app:layout_constraintStart_toStartOf="@+id/nameView"
+        app:layout_constraintTop_toBottomOf="@+id/nameView" />
+
     <EditText
         android:id="@+id/nameView"
         android:layout_width="289dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp" android:ems="10"
-        android:hint="Name" android:inputType="textPersonName"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
         android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="@+id/emailView"
         app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/emailView" app:layout_constraintTop_toBottomOf="@+id/emailView"/>
+        app:layout_constraintStart_toStartOf="@+id/emailView"
+        app:layout_constraintTop_toBottomOf="@+id/emailView" />
     <Button
         android:id="@+id/btn_register"
         android:layout_width="0dp"
@@ -52,20 +58,26 @@
         app:layout_constraintEnd_toEndOf="@+id/carNumberView" app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/carNumberView"
         app:layout_constraintTop_toBottomOf="@+id/carNumberView"/>
+
     <EditText
         android:id="@+id/emailView"
         android:layout_width="289dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="140dp" android:layout_marginEnd="8dp"
-        android:ems="10" android:hint="Email"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Email"
         android:inputType="textWebEmailAddress|textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/passCornfirmView"
         android:layout_width="289dp"
-        android:layout_height="0dp"
+        android:layout_height="48dp"
         android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="Password Confirm"
@@ -74,11 +86,12 @@
         app:layout_constraintEnd_toEndOf="@+id/passView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/passView"
-        app:layout_constraintTop_toBottomOf="@+id/passView"/>
+        app:layout_constraintTop_toBottomOf="@+id/passView" />
+
     <EditText
         android:id="@+id/carTypeView"
         android:layout_width="289dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="Car Type"
@@ -87,11 +100,12 @@
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
     <EditText
         android:id="@+id/carNumberView"
         android:layout_width="289dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginTop="48dp"
         android:ems="10"
         android:hint="Car Number"
@@ -100,7 +114,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"

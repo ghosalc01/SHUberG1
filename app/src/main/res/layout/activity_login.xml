@@ -10,23 +10,28 @@
     <EditText
         android:id="@+id/et_id"
         android:layout_width="264dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="160dp" android:layout_marginEnd="8dp"
-        android:ems="10" android:hint="Email"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Email"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/et_pass"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPersonName|textWebPassword"
         app:layout_constraintEnd_toEndOf="@+id/et_id"
-        app:layout_constraintStart_toStartOf="@+id/et_id" app:layout_constraintTop_toBottomOf="@+id/et_id"/>
+        app:layout_constraintStart_toStartOf="@+id/et_id"
+        app:layout_constraintTop_toBottomOf="@+id/et_id" />
     <Button
         android:id="@+id/btn_login"
         android:layout_width="0dp"
@@ -56,12 +61,16 @@
         android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="EASY TO RIDE THE TAXI"
         android:textAlignment="center" app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="@+id/textView3" app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+
     <Switch
         android:id="@+id/btn_switch"
         android:layout_width="0dp"
-        android:layout_height="wrap_content" android:text="Use as a driver"
-        android:textAlignment="viewEnd" android:textStyle="italic"
+        android:layout_height="48dp"
+        android:minHeight="48dp"
+        android:text="Use as a driver"
+        android:textAlignment="viewEnd"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="@+id/btn_register"
         app:layout_constraintStart_toStartOf="@+id/btn_register"
-        app:layout_constraintTop_toBottomOf="@+id/btn_register"/>
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
 </androidx.constraintlayout.widget.ConstraintLayout>
