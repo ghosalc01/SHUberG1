@@ -1,7 +1,6 @@
 package com.example.shuber;
 
 import android.content.Intent;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.*;
 import androidx.annotation.NonNull;
@@ -10,7 +9,6 @@ import android.os.Bundle;
 import com.example.shuber.model.Customer;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -126,7 +124,7 @@ public class CustomerRegisterActivity extends AppCompatActivity implements View.
 
                             mDatabaseRef.child("Customer").child(user.getUid()).setValue(customer);
                             Toast.makeText(CustomerRegisterActivity.this, "It has been registered", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(CustomerRegisterActivity.this, MapsActivity.class);
+                            Intent intent = new Intent(CustomerRegisterActivity.this, MainMapsCustomerActivity.class);
                             startActivity(intent);
                             finish();
                         } else {

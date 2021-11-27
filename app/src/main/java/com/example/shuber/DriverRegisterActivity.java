@@ -110,7 +110,7 @@ public class DriverRegisterActivity extends AppCompatActivity {
 
                             mDatabaseRef.child("Driver").child(user.getUid()).setValue(driver);
                             Toast.makeText(DriverRegisterActivity.this, "It has been registered", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(DriverRegisterActivity.this, MapsActivity.class);
+                            Intent intent = new Intent(DriverRegisterActivity.this, MainMapsCustomerActivity.class);
                             startActivity(intent);
                             finish();
                         } else {
