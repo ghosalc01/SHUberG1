@@ -11,33 +11,49 @@
         android:layout_above="@+id/origin" android:layout_marginBottom="0dp"
         android:layout_marginTop="0dp"
         tools:context=".MainMapsCustomerActivity"/>
+
     <Button
         android:id="@+id/btn_request"
         android:layout_width="match_parent"
-        android:layout_height="40dp" android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" android:layout_alignParentBottom="true" android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp" android:layout_marginBottom="0dp"
-        android:text="Request"/>
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="Request" />
+
     <EditText
         android:id="@+id/destination"
+        style="@style/Widget.MaterialComponents.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btn_request"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" android:layout_marginStart="0dp" android:layout_marginEnd="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
-        style="@style/Widget.MaterialComponents.TextView"
-        android:ems="10" android:hint="Destination" android:inputType="textPersonName"/>
+        android:ems="10"
+        android:hint="Destination"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/origin"
+        style="@style/Widget.MaterialComponents.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/destination"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" android:layout_marginStart="0dp" android:layout_marginEnd="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
-        style="@style/Widget.MaterialComponents.TextView"
-        android:ems="10" android:hint="Origin" android:inputType="textPersonName"/>
+        android:ems="10"
+        android:hint="Origin"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
 
 </RelativeLayout>
