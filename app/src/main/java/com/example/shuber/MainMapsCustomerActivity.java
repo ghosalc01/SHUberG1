@@ -12,7 +12,6 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.example.shuber.databinding.ActivityMainMapsCustomerBinding;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.maps.android.PolyUtil;
@@ -81,9 +80,6 @@ public class MainMapsCustomerActivity extends FragmentActivity implements OnMapR
                     try {
                         JSONObject jObject = new JSONObject(body.string());
                         JSONArray routes =  jObject.getJSONArray("routes");
-                        if(currentPolyline != null){
-                            currentPolyline.remove();
-                        }
                         List<LatLng> decodedPoints = PolyUtil.decode(routes.getJSONObject(0).getJSONObject("overview_polyline").getString("points"));
                         new Thread(new Runnable()
                         {
@@ -95,10 +91,10 @@ public class MainMapsCustomerActivity extends FragmentActivity implements OnMapR
                                     @Override
                                     public void run()
                                     {
-
-                                        mMap.addMarker(origin);
+                                        if(currentPolyline != null){
+                                            currentPolyline.remove();
+                                        }
                                         mMap.addMarker(destination);
-                                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(origin.getPosition(),12),1300,null);
                                         PolylineOptions options = new PolylineOptions();
                                         options.width(8);
                                         options.color(Color.RED);
@@ -128,6 +124,8 @@ public class MainMapsCustomerActivity extends FragmentActivity implements OnMapR
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.addMarker(origin);
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(origin.getPosition(),12),1300,null);
     }
 
     private String getUrl(LatLng origin, LatLng destination, String directionMode) {
