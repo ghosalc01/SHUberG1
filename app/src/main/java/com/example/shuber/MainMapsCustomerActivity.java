@@ -95,10 +95,7 @@ public class MainMapsCustomerActivity extends FragmentActivity implements OnMapR
                                     @Override
                                     public void run()
                                     {
-
-                                        mMap.addMarker(origin);
                                         mMap.addMarker(destination);
-                                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(origin.getPosition(),12),1300,null);
                                         PolylineOptions options = new PolylineOptions();
                                         options.width(8);
                                         options.color(Color.RED);
@@ -128,6 +125,8 @@ public class MainMapsCustomerActivity extends FragmentActivity implements OnMapR
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.addMarker(origin);
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(origin.getPosition(),12),1300,null);
     }
 
     private String getUrl(LatLng origin, LatLng destination, String directionMode) {
