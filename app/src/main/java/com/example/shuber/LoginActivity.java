@@ -68,7 +68,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(LoginActivity.this, MainMapsCustomerActivity.class);
+                    Intent intent;
+                    if(Singleton.getInstance().userType.equals("driver"))
+                        intent = new Intent(LoginActivity.this, MainMapsDriverActivity.class);
+                    else
+                        intent = new Intent(LoginActivity.this, MainMapsCustomerActivity.class);
                     startActivity(intent);
                     finish();
                 }else{
